@@ -13,6 +13,7 @@ export default function NavbarButton(props) {
     style,
     tintColor,
     title,
+    titleStyle,
     handler,
     disabled,
     accessible,
@@ -28,7 +29,7 @@ export default function NavbarButton(props) {
       accessibilityLabel={accessibilityLabel}
     >
       <View style={style}>
-        <Text style={[styles.navBarButtonText, { color: tintColor }]}>{title}</Text>
+        <Text style={[styles.navBarButtonText, { color: tintColor }, titleStyle]}>{title}</Text>
       </View>
     </TouchableOpacity>
   );
@@ -39,6 +40,7 @@ NavbarButton.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
+  titleStyle: Text.propTypes.style,
   tintColor: PropTypes.string,
   title: PropTypes.string,
   handler: PropTypes.func,
@@ -49,6 +51,7 @@ NavbarButton.propTypes = {
 
 NavbarButton.defaultProps = {
   style: {},
+  titleStyle: {},
   title: '',
   tintColor: '#0076FF',
   disabled: false,

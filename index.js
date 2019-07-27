@@ -13,6 +13,7 @@ import styles from './styles';
 
 const ButtonShape = {
   title: PropTypes.string.isRequired,
+  titleStyle: Text.propTypes.style,
   style: ViewPropTypes.style,
   handler: PropTypes.func,
   disabled: PropTypes.bool,
@@ -40,6 +41,7 @@ function getButtonElement(data, style) {
         <NavbarButton
           title={data.title}
           style={[data.style, style]}
+          titleStyle={data.titleStyle}
           tintColor={data.tintColor}
           handler={data.handler}
           accessible={data.accessible}

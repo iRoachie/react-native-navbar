@@ -73,6 +73,7 @@ That's it, you're ready to go!
   - **showAnimation** - ('fade', 'slide', 'none') - Type of statusBar show animation
 - **leftButton / rightButton** - (Object, React Element) - Either plain object with configuration, or React Element which will be used as a custom left/right button element. Configuration object has following keys:
   - **title** - (String) - Button's title
+  - **titleStyle** - (Object, Array, Number) - Style object or array of style objects
   - **tintColor** - (String) - Button's text color
   - **style** - (Object, Array) - Style object or array of style objects
   - **handler** - (Function) - onPress function handler
